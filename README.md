@@ -13,7 +13,7 @@ This way the script is started by cron every minute.
 
 # How to test it to see if `notify-send` works
 
-Don't forget to `chmod +x /home/user/bin/zfs-health.bash` and test if it works by editing the script (after making a backup!) like this:
+Don't forget to `chmod +x /home/user/bin/zfs-health.bash` and test it by editing the script (after making a backup!) like this:
 
      condition=$(/sbin/zpool status | egrep '(ONLINE|DEGRADED|FAULTED|OFFLINE|UNAVAIL|REMOVED|FAIL|DESTROYED|corrupt|cannot|unrecover)')
 
@@ -26,3 +26,5 @@ If you don't have ZFS (you use the script to monitor your software RAID) edit it
     if grep "U" /proc/mdstat ; then
 
 (I replaced the underscore (`_`) symbol with `U`.)
+
+After the reverting edits make sure the file is still with executable permission.
