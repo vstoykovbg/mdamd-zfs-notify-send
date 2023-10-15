@@ -18,3 +18,9 @@ Don't forget to `chmod +x /home/user/bin/zfs-health.bash` and test if it works b
 (I inserted "ONLINE|" before "DEGRADED".)
 
 After about 1 minute or less you shold receve a notification. If you don't - something is not right. Check your cron configuration.
+
+If you don't have ZFS (you use the script to monitor your software RAID) edit it like this:
+
+    if grep "U" /proc/mdstat ; then
+
+(I replaced the underscore (`_`) symbol with `U`.)
