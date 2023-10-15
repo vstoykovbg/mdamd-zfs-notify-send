@@ -1,5 +1,9 @@
 This script is using `notify-send` to notify the user about problems with mdadm (software RAID) and ZFS.
 
+To see how these notifications look like type in your terminal this:
+
+    notify-send "This is how the notification look."
+
 It looks for suspicious strings in the output of the command `sbin/zpool status` and looks for the symbol `_` (underscore) in the file `/proc/mdstat`.
 
 The script must be started as the user who will receive the notification.
