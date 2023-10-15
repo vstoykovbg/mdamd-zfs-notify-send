@@ -11,7 +11,7 @@ For example, if the script is located at `/home/user/bin/zfs-health.bash` the fi
 
 This way the script is started by cron every minute.
 
-== How to test it to see if `notify-send` works
+== How to test it to see if `notify-send` works ==
 
 Don't forget to `chmod +x /home/user/bin/zfs-health.bash` and test if it works by editing the script (after making a backup!) like this:
 
