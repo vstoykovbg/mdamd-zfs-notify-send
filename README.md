@@ -27,4 +27,4 @@ If you don't have ZFS (you use the script to monitor your software RAID) edit it
 
 (I replaced the underscore (`_`) symbol with `U`.)
 
-After the reverting edits make sure the file is still with executable permission.
+After reverting the edits make sure the file is still with executable permission.
