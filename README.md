@@ -10,3 +10,11 @@ For example, if the script is located at `/home/user/bin/zfs-health.bash` the fi
     * * * * * /home/user/bin/zfs-health.bash
 
 This way the script is started by cron every minute.
+
+Don't forget to `chmod +x /home/user/bin/zfs-health.bash` and test if it works by editing the script (after making a backup!) like this:
+
+     condition=$(/sbin/zpool status | egrep '(ONLINE|DEGRADED|FAULTED|OFFLINE|UNAVAIL|REMOVED|FAIL|DESTROYED|corrupt|cannot|unrecover)')
+
+(I inserted "ONLINE|" before "DEGRADED".)
+
+After about 1 minute or less you shold receve a notification. If you don't - something is not right. Check your cron configuration.
